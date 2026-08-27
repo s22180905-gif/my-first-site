@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه لوازم جانبی</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; background: #f4f4f9; margin: 0; padding-bottom: 80px; }
+        header { background: #2c3e50; color: white; padding: 30px 20px; text-align: center; }
+        .search-box { padding: 20px; text-align: center; }
+        #searchInput { width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; }
+        .container { max-width: 600px; margin: auto; padding: 10px; }
+        
+        /* استایل کارت‌های محصول (همان که خواستی) */
+        .product-card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .product-image { background: #eee; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 10px; }
+        .product-price { font-weight: bold; color: #e74c3c; margin: 10px 0; }
+        .buy-button { display: block; background: #27ae60; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 5px; }
+        
+        .site-desc { text-align: center; padding: 20px; color: #666; font-size: 0.85em; border-top: 1px solid #ddd; }
+        .footer-nav { text-align: center; padding: 10px; background: #2c3e50; }
+        .footer-nav a { color: white; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<header><h1>فروشگاه لوازم جانبی</h1></header>
+
+<div class="search-box">
+    <input type="text" id="searchInput" onkeyup="search()" placeholder="جستجوی محصول...">
+</div>
+
+<h2 style="text-align: center;">محصولات پیشنهادی ارزان</h2>
+
+<div class="container" id="productList">
+    <!-- شروع کارت محصول -->
+    <div class="product-card">
+        <div class="product-image">[جای عکس محصول]</div>
+        <div class="product-info">
+            <h3>[نام محصول]</h3>
+            <p>[توضیحات محصول]</p>
+            <div class="product-price">[قیمت] تومان</div>
+            <a href="#" class="buy-button">مشاهده و خرید</a>
+        </div>
+    </div>
+<div class="product-card">
+    <div class="product-image">
+        [جای عکس محصول جدید]
+    </div>
+    <div class="product-info">
+        <h3>[نام محصول جدید]</h3>
+        <p>[توضیحات محصول جدید]</p>
+        <div class="product-price">[قیمت] تومان</div>
+        <a href="[لینک اختصاصی افیلیو]" class="buy-button">مشاهده و خرید</a>
+    </div>
+</div>
+  div class="product-card">
+    <div class="product-image">
+        [جای عکس محصول جدید]
+    </div>
+    <div class="product-info">
+        <h3>[نام محصول جدید]</h3>
+        <p>[توضیحات محصول جدید]</p>
+        <div class="product-price">[قیمت] تومان</div>
+        <a href="[لینک اختصاصی افیلیو]" class="buy-button">مشاهده و خرید</a>
+    </div>
+</div>
+  div class="product-card">
+    <div class="product-image">
+        [جای عکس محصول جدید]
+    </div>
+    <div class="product-info">
+        <h3>[نام محصول جدید]</h3>
+        <p>[توضیحات محصول جدید]</p>
+        <div class="product-price">[قیمت] تومان</div>
+        <a href="[لینک اختصاصی افیلیو]" class="buy-button">مشاهده و خرید</a>
+    </div>
+</div>
+div class="product-card">
+    <div class="product-image">
+        [جای عکس محصول جدید]
+    </div>
+    <div class="product-info">
+        <h3>[نام محصول جدید]</h3>
+        <p>[توضیحات محصول جدید]</p>
+        <div class="product-price">[قیمت] تومان</div>
+        <a href="[لینک اختصاصی افیلیو]" class="buy-button">مشاهده و خرید</a>
+    </div>
+</div>
+
+    <!-- پایان کارت محصول -->
+</div>
+
+<div class="site-desc">
+    این سایت تخصصی‌ترین مرجع برای خرید لوازم جانبی با کیفیت و قیمت مناسب است. هدف ما رضایت شماست.
+</div>
+
+<div class="footer-nav"><a href="home.html">صفحه اصلی (نمایش شبکه‌ای)</a></div>
+
+<script>
+function search() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('product-card');
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].style.display = cards[i].innerText.toLowerCase().includes(input) ? "block" : "none";
+    }
+}
+</script>
+</body>
+</html>
